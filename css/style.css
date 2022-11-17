@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #767A99;
+}
+main.calculator{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.calculator-display{
+    box-sizing: border-box;
+    width: 25vw;
+    padding: 20px;
+    text-align: right;
+    background-color: #333A58;
+    border: 1px solid #ccc;
+    border-radius: 10px 10px 0 0;
+}
+#display{
+    color: #FFF;
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.calculator-buttons{
+    width: 25vw;
+    height: 30vh;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.calculator-buttons>div{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #333A58;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    color: #FFF;
+    font-size: 3em;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.calculator-buttons>div:hover{
+    background-color: #767a99;
+}
+.calculator-buttons>div.math-operators{
+    font-weight: 900;
+    background-color: #767A99;
+}
+.calculator-buttons>div.math-operators:hover{
+    background-color: #333A58;
+}
+div#clearButton{
+    font-weight: 900;
+    background-color: #AA2442;
+}
+div#resultButton{
+    font-weight: 900;
+    background-color: #FF3764;
+}
+div#clearButton:hover{
+    background-color: #FF3764;
+}
+div#resultButton:hover{
+    background-color: #AA2442;
+}
+
+
+@media (max-width: 1300px){
+    .calculator-display{
+        width: 70vw;
+    }
+    .calculator-buttons{
+        width: 70vw;
+    }
+}
