@@ -16,6 +16,7 @@ main.calculator{
     flex-direction: column;
 }
 .calculator-display{
+    overflow: hidden;
     box-sizing: border-box;
     width: 25vw;
     padding: 20px;
@@ -77,13 +78,33 @@ div#clearButton:hover{
 div#resultButton:hover{
     background-color: #AA2442;
 }
+.developed-area{
+    color: #FFF;
+}
+.developed-area>a{
+    color: #FFF;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+.developed-area a:hover{
+    text-shadow: 1px 1px 10px #FFF;
+}
 
-
-@media (max-width: 1300px){
-    .calculator-display{
-        width: 70vw;
+@media (max-width: 480px){
+    .calculator-display, .calculator-buttons{
+        width: 95vw;
     }
-    .calculator-buttons{
-        width: 70vw;
+    #display{
+        font-size: 2.5em;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 1000px){ 
+    .calculator-display, .calculator-buttons{
+        width: 60vw;
+    }
+    #display{
+        font-size: 3em;
     }
 }
