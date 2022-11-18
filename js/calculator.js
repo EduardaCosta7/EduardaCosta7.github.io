@@ -7,8 +7,10 @@ let valueNumber1, valueNumber2;
 function updateDisplay(buttonNumber){
     if(numberOfClick == 0){
         display.innerText = buttonNumber;
-    }else{
+    }else if(numberOfClick <8){
         display.innerText += buttonNumber;
+    }else{
+        display.style.color = "#FF3764";
     }
     numberOfClick++
 }
@@ -18,6 +20,7 @@ clearButton.addEventListener("click", deleteDisplay);
 
 // Fução para limpar os valore/display
 function deleteDisplay(){
+    display.style.color = "#FFF";
     display.innerText = 0;
     numberOfClick = 0;
     numberOneCreated = false;
@@ -26,7 +29,7 @@ function deleteDisplay(){
 plusButton.addEventListener("click", sum);
 function sum(){
     valueNumber1 = Number(display.innerText);
-    
+    display.style.color = "#FFF";
     numberOneCreated = true;
     display.innerText = 0;
     numberOfClick = 0;
@@ -36,7 +39,7 @@ function sum(){
 minusButton.addEventListener("click", subtraction)
 function subtraction(){
     valueNumber1 = +display.innerText;
-    
+    display.style.color = "#FFF";
     numberOneCreated = true;
     display.innerText = 0;
     numberOfClick = 0;
@@ -44,8 +47,8 @@ function subtraction(){
 }
 timesButton.addEventListener("click", multiplication)
 function multiplication(){ 
-valueNumber1 = +display.innerText;
-
+    valueNumber1 = +display.innerText;
+    display.style.color = "#FFF";
     numberOneCreated = true;
     display.innerText = 0;
     numberOfClick = 0;
@@ -53,8 +56,8 @@ valueNumber1 = +display.innerText;
 }
 dividedButton.addEventListener("click", division)
 function division(){ 
-valueNumber1 = +display.innerText;
-
+    valueNumber1 = +display.innerText;
+    display.style.color = "#FFF";
     numberOneCreated = true;
     display.innerText = 0;
     numberOfClick = 0;
